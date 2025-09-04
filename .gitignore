@@ -1,0 +1,10 @@
+/node_modules
+/note.md
+
+/src/generated/prisma
+
+/uploads
+.env
+.env.local
+.env.development
+.env.production

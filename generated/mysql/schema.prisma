@@ -1,0 +1,44 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+generator client {
+  provider = "prisma-client-js"
+  output   = "../../generated/mysql" //Dinh dang noi xuat ra file generated
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("MYSQL_URL")
+}
+
+model Blogs {
+  blogID    String    @id
+  title     String //Tiêu đề của bài Blogs
+  banner    String? //Duong link url toi hinh anh upload len cloud 
+  content   String    @db.Text //Nội dung của bài Blog !!!. Vi no la bai Blog, noi dung rat dai nen xai kieu Text la hop li 
+  score     Int //Dung de do do thanh cong cua bai Blog do, se co cong thuc rieng de tinh -> so sao 
+  views     Int //Số lượng người xem của một bài Blogs 
+  author    Users     @relation(fields: [userID], references: [userID])
+  userID    String //ID cua nguoi viet Blogs 
+  createdAt DateTime //Thời gian tạo ra bài viết
+  watchs    Int //Tong so luot xem 
+  updatedAt DateTime //Thoi gian cap nhat bai viet gan nhat 
+  TopBlogs  TopBlogs?
+}
+
+model TopBlogs {
+  topBlogID String @id @default(uuid())
+  Blogs     Blogs  @relation(fields: [blogID], references: [blogID])
+  blogID    String @unique
+}
+
+model Users {
+  userID   String  @id
+  avatar   String
+  name     String
+  username String  @unique
+  Blogs    Blogs[]
+}

@@ -1,0 +1,43 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "types": "module",
+  "scripts": {
+    "start": "nodemon ./src/server.mts",
+    "dev": "ts-node ./src/server.mts",
+    "prisma:init": "npx prisma init",
+    "prims:init:mysql:default": "npx prisma init --datasource-provider mysql",
+    "prims:init:mongodb:default": "npx prisma init --datasource-provider mongodb",
+    "prisma:init:mysql": "npx prisma init --datasource-provider mysql --schema=mysql/schema.prisma",
+    "prisma:init:mongodb": "npx prisma init --datasource-provider mongodb --schema=mongodb/schema.prisma",
+    "prisma:generate": "npx prisma generate",
+    "prisma:migrate": "npx prisma migrate dev --name init",
+    "prisma:push": "npx prisma db push",
+    "prisma:studio": "npx prisma studio",
+    "prisma:reset": "npx prisma migrate reset --force",
+    "prisma:rollback": "npm run prisma:reset && npm run prisma:migrate",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "@prisma/client": "^6.13.0",
+    "@types/cors": "^2.8.19",
+    "@types/express": "^5.0.3",
+    "@types/multer": "^2.0.0",
+    "@types/node": "^24.2.1",
+    "cloudinary": "^2.7.0",
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.1",
+    "express": "^5.1.0",
+    "multer": "^2.0.2",
+    "nodemon": "^3.1.10",
+    "path": "^0.12.7",
+    "prisma": "^6.13.0",
+    "ts-node": "^10.9.2"
+  }
+}
