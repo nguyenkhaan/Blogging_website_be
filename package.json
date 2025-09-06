@@ -6,7 +6,7 @@
   "type": "module",
   "scripts": {
     "build": "tsc",
-    "start": "node dist/server.js",
+    "start": "node dist/server.mjs",
     "dev": "ts-node ./src/server.mts",
     "prisma:init": "npx prisma init",
     "prims:init:mysql:default": "npx prisma init --datasource-provider mysql",
