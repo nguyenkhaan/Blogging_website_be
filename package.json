@@ -5,7 +5,8 @@
   "main": "index.js",
   "types": "module",
   "scripts": {
-    "start": "nodemon ./src/server.mts",
+    "build": "tsc", 
+    "start": "node dist/server.js",
     "dev": "ts-node ./src/server.mts",
     "prisma:init": "npx prisma init",
     "prims:init:mysql:default": "npx prisma init --datasource-provider mysql",

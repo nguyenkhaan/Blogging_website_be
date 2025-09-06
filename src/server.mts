@@ -12,7 +12,7 @@ const HOST = process.env.PORT
 const app = express()
 
 app.use(cors({
-    origin: 'http://localhost:5173', // hoặc '*' nếu cho tất cả
+    origin: 'https://blogging-website-fe.vercel.app/', // hoặc '*' nếu cho tất cả
     methods: ['GET', 'POST', 'PUT', 'DELETE'],
     allowedHeaders: ['Content-Type'], 
     credentials: true 
@@ -25,6 +25,6 @@ app.use(blogRouter)
 app.use(userRouter) 
 app.use(searchRouter) 
 
-app.listen(6869 , function() {
+app.listen(process.env.HOST ||3000 , function() {
     console.log('Khoi dong thanh cong') 
 })
