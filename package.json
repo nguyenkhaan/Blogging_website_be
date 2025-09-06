@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "types": "module",
+  "types": "commonjs",
   "scripts": {
     "build": "tsc",
     "start": "node dist/server.js",
@@ -29,6 +29,7 @@
     "@types/cors": "^2.8.19",
     "@types/express": "^5.0.3",
     "@types/multer": "^2.0.0",
+    "@types/node": "^24.3.1",
     "cloudinary": "^2.7.0",
     "cors": "^2.8.5",
     "dotenv": "^17.2.1",
@@ -39,8 +40,5 @@
     "prisma": "^6.13.0",
     "ts-node": "^10.9.2",
     "typescript": "^5.9.2"
-  },
-  "devDependencies": {
-    "@types/node": "^24.3.1"
   }
 }
