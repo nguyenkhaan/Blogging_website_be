@@ -24,7 +24,6 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "type": "commonjs",
   "dependencies": {
     "@prisma/client": "^6.13.0",
     "@types/cors": "^2.8.19",
