@@ -5,8 +5,7 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "build": "tsc && npm run fix-imports",
-     "fix-imports": "replace-in-file '.mts' '.mjs' 'dist/**/*.mjs'",
+    "build": "tsc && node script/postbuild.js",
     "start": "node dist/server.mjs",
     "dev": "ts-node ./src/server.mts",
     "prisma:init": "npx prisma init",

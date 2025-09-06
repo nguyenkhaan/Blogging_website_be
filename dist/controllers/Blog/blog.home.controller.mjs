@@ -1,5 +1,5 @@
 import { mysqlPrisma } from "../../config/prisma.config.mjs";
-import { getDataForHome } from "../../services/Blog/crud.mts";
+import { getDataForHome } from "../../services/Blog/crud.mjs";
 async function countBlogs(req, res) {
     const totalBlogs = await mysqlPrisma.blogs.count();
     return res.status(200).send(totalBlogs);

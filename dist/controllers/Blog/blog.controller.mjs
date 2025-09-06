@@ -1,5 +1,5 @@
 import { getData, deleteData, updateData } from "../../services/Blog/crud.mjs";
-import defaultAvatar from "../../helpers/default-avatar.mts";
+import defaultAvatar from "../../helpers/default-avatar.mjs";
 async function getBlog(req, res) {
     try {
         if (!req.body || !req.body.id)

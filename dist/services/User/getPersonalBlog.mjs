@@ -1,5 +1,5 @@
 import { mongodbPrisma } from "../../config/prisma.config.mjs";
-import { mysqlPrisma } from "../../config/prisma.config.mts";
+import { mysqlPrisma } from "../../config/prisma.config.mjs";
 async function getPersonalBlog(userID, isContent) {
     let selection = await mongodbPrisma.user.findFirst({
         where: {

@@ -1,5 +1,5 @@
 import { cloudinary } from "../../config/cloudinary.config.mjs";
-import { extractPublicId } from "../../helpers/extractPublicIdCloud.mts";
+import { extractPublicId } from "../../helpers/extractPublicIdCloud.mjs";
 async function upload(base64File, id) {
     const url = await cloudinary.uploader.upload(base64File, {
         public_id: id

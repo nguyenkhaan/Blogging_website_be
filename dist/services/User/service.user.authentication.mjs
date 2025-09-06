@@ -1,8 +1,8 @@
 import { getDayBetween } from "../../helpers/calcDateBetween.mjs";
-import { uuid } from "../../helpers/uuid.mts";
-import { startDate, endDate } from "../../helpers/currentDate.mts";
-import { mongodbPrisma } from "../../config/prisma.config.mts";
-import { mysqlPrisma } from "../../config/prisma.config.mts";
+import { uuid } from "../../helpers/uuid.mjs";
+import { startDate, endDate } from "../../helpers/currentDate.mjs";
+import { mongodbPrisma } from "../../config/prisma.config.mjs";
+import { mysqlPrisma } from "../../config/prisma.config.mjs";
 async function getData(email, password) {
     const user = await mongodbPrisma.user.findFirst({
         where: {
