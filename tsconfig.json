@@ -9,7 +9,10 @@
     "esModuleInterop": true,
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
-    "types": ["node", "express"]
+    "types": ["node", "express"], 
+    "allowImportingTsExtensions": true, 
+    "emitDeclarationOnly": true, 
+    "declaration": true
   },
   "include": ["src"],
   "exclude": ["node_modules", "dist"]
