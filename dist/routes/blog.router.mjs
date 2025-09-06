@@ -1,6 +1,6 @@
 import express from 'express';
 const router = express.Router();
-import { multerConfig } from '../config/server.config.mts';
+import { multerConfig } from '../config/server.config.mjs';
 import { deleteBlog, getBlog, updateBlog } from '../controllers/Blog/blog.controller.mts';
 import { uploadBlog } from '../controllers/Blog/uploadBlog.mts';
 import { countBlogs } from '../controllers/Blog/blog.home.controller.mts';

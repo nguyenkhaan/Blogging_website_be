@@ -1,4 +1,4 @@
-import { getPersonalBlog } from "../../services/User/getPersonalBlog.mts";
+import { getPersonalBlog } from "../../services/User/getPersonalBlog.mjs";
 async function getUserBlogs(req, res) {
     try {
         if (!req.body || !req.body.id)

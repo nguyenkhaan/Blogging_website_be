@@ -1,5 +1,9 @@
 {
   "compilerOptions": {
+    "baseUrl": "src",
+    "paths": {
+      "@/*": ["*"]
+    },
     "target": "ES2022",
     "module": "NodeNext",
     "moduleResolution": "NodeNext",
@@ -11,7 +15,6 @@
     "forceConsistentCasingInFileNames": true,
     "types": ["node", "express"], 
     "allowImportingTsExtensions": true, 
-    // "emitDeclarationOnly": true, 
     "declaration": true, 
     "noEmit": true
   },

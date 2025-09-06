@@ -1,5 +1,5 @@
 import express from "express";
-import { login, register } from "../controllers/User/user.authentication.controller.mts";
+import { login, register } from "../controllers/User/user.authentication.controller.mjs";
 import { getPersonalInformation, updatePersonalInformation } from "../controllers/User/user.personalInfo.mts";
 import { getUserBlogs } from "../controllers/User/getUserBlog.mts";
 import { activiyRecord } from "../controllers/User/activityRecord.mts";

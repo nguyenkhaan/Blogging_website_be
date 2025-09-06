@@ -1,4 +1,4 @@
-import { getData, updateData } from "../../services/User/service.personalInfo.mts";
+import { getData, updateData } from "../../services/User/service.personalInfo.mjs";
 async function getPersonalInformation(req, res) {
     try {
         if (!req.body || !req.body.id)

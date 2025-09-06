@@ -1,4 +1,4 @@
-import { updateActivity } from "../../services/User/updateActivity.mts";
+import { updateActivity } from "../../services/User/updateActivity.mjs";
 async function activiyRecord(req, res) {
     // console.log(req.body) 
     const { id, days } = req.body;

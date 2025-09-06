@@ -5,7 +5,8 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "build": "tsc && tsc-alias",
+    "build": "tsc && npm run fix-imports",
+     "fix-imports": "replace-in-file '.mts' '.mjs' 'dist/**/*.mjs'",
     "start": "node dist/server.mjs",
     "dev": "ts-node ./src/server.mts",
     "prisma:init": "npx prisma init",
@@ -41,5 +42,10 @@
     "ts-node": "^10.9.2",
     "tsc-alias": "^1.8.16",
     "typescript": "^5.9.2"
+  },
+  "devDependencies": {
+    "replace-in-file": "^8.3.0",
+    "replace-in-files": "^3.0.0",
+    "tscpaths": "^0.0.9"
   }
 }

@@ -1,7 +1,7 @@
 import express from 'express';
 import dotenv from 'dotenv';
 import cors from 'cors';
-import { router as blogRouter } from './routes/blog.router.mts';
+import { router as blogRouter } from './routes/blog.router.mjs';
 import { router as userRouter } from './routes/user.router.mts';
 import { router as searchRouter } from './routes/search.router.mts';
 import { jsonConfig, urlEncodedConfig, staticFileConfig } from './config/server.config.mts';

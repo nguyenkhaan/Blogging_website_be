@@ -1,4 +1,4 @@
-import { getBlog } from "../../services/Search/getBlog.mts";
+import { getBlog } from "../../services/Search/getBlog.mjs";
 async function searchBlog(req, res) {
     try {
         if (!req.body || !req.body.search)

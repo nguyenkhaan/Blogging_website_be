@@ -1,4 +1,4 @@
-import { mysqlPrisma } from "../../config/prisma.config.mts";
+import { mysqlPrisma } from "../../config/prisma.config.mjs";
 async function getBlog(search) {
     if (!search)
         return null;

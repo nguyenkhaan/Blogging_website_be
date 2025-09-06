@@ -1,4 +1,4 @@
-import { getData, createData } from "../../services/User/service.user.authentication.mts";
+import { getData, createData } from "../../services/User/service.user.authentication.mjs";
 import { makeToken } from "../../services/User/createToken.mts";
 //[LOGIN] 
 async function login(req, res) {

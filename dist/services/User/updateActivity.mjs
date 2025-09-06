@@ -1,4 +1,4 @@
-import { mongodbPrisma } from "../../config/prisma.config.mts";
+import { mongodbPrisma } from "../../config/prisma.config.mjs";
 async function updateActivityRecord(id, days) {
 }
 async function updateActivity(id, days) {

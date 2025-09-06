@@ -1,4 +1,4 @@
-import { uploadToCloud } from "../../services/Blog/uploadBlog.mts";
+import { uploadToCloud } from "../../services/Blog/uploadBlog.mjs";
 import { uuid } from "../../helpers/uuid.mts";
 import { createData } from "../../services/Blog/crud.mts";
 import { addBlogForUser } from "../../services/Blog/addBlogForUser.mts";

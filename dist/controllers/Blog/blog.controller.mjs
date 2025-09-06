@@ -1,4 +1,4 @@
-import { getData, deleteData, updateData } from "../../services/Blog/crud.mts";
+import { getData, deleteData, updateData } from "../../services/Blog/crud.mjs";
 import defaultAvatar from "../../helpers/default-avatar.mts";
 async function getBlog(req, res) {
     try {

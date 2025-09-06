@@ -1,4 +1,4 @@
-import { mongodbPrisma, mysqlPrisma } from "../../config/prisma.config.mts";
+import { mongodbPrisma, mysqlPrisma } from "../../config/prisma.config.mjs";
 import { drop, upload } from "../User/cloud.mts";
 import defaultAvatar from "../../helpers/default-avatar.mts";
 import { uuid } from "../../helpers/uuid.mts";
