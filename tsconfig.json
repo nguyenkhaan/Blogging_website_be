@@ -11,8 +11,9 @@
     "forceConsistentCasingInFileNames": true,
     "types": ["node", "express"], 
     "allowImportingTsExtensions": true, 
-    "emitDeclarationOnly": true, 
-    "declaration": true
+    // "emitDeclarationOnly": true, 
+    "declaration": true, 
+    "noEmit": true
   },
   "include": ["src"],
   "exclude": ["node_modules", "dist"]
