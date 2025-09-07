@@ -26,6 +26,6 @@ app.use(blogRouter)
 app.use(userRouter) 
 app.use(searchRouter) 
 
-app.listen(process.env.HOST ||3000 , function() {
+app.listen(process.env.PORT ||3000 , function() {
     console.log('Khoi dong thanh cong') 
 })
