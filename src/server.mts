@@ -11,13 +11,26 @@ console.log(process.env.HOST)
 const HOST = process.env.PORT 
 const app = express()
 
+const allowedOrigins = [
+  "http://localhost:5173", // dev local
+  "https://blogging-website-fe.vercel.app" // FE Vercel
+];
+
 app.use(cors({
-    origin: '*', // hoặc '*' nếu cho tất cả, khong duoc phep them dau / 
-    // origin: 'http://localhost:5173', 
-    methods: ['GET', 'POST', 'PUT', 'DELETE'],
-    allowedHeaders: ['Content-Type'], 
-    credentials: true 
-  }));
+  origin: function(origin, callback) {
+    // Cho phép request không có origin (Postman, server-side)
+    if (!origin) return callback(null, true);
+
+    if (allowedOrigins.includes(origin)) {
+      callback(null, true);
+    } else {
+      callback(new Error("Not allowed by CORS"));
+    }
+  },
+  methods: ['GET','POST','PUT','DELETE'],
+  allowedHeaders: ['Content-Type', 'Authorization'],
+  credentials: true
+}));
 jsonConfig(app) 
 urlEncodedConfig(app) 
 staticFileConfig(app) 
