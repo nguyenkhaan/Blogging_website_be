@@ -69,3 +69,5 @@ Mặc định mysql sẽ chạy ở port 3306
 B2. Sử dụng file được cung cấp để tạo dữ liệu mẫu và .env 
 
 B3. Tại thư mục prisma/mysql. Chạy lệnh `npx prisma migrate dev` để đồng bộ giữa schema và db
+
+Mongodb Atlas: mongodb+srv://cloud:cloud@cluster0.b7l7uxh.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0
