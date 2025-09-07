@@ -12,7 +12,7 @@ const HOST = process.env.PORT
 const app = express()
 
 app.use(cors({
-    origin: 'https://vercel.com/nguyenkhaans-projects/blogging-website-fe', // hoặc '*' nếu cho tất cả, 
+    origin: 'https://blogging-website-fe.vercel.app/', // hoặc '*' nếu cho tất cả, 
     // origin: 'http://localhost:5173', 
     methods: ['GET', 'POST', 'PUT', 'DELETE'],
     allowedHeaders: ['Content-Type'], 
