@@ -10,6 +10,7 @@ async function countBlogs(req: Request , res: Response)
 
 async function getBlogByPage(req: Request , res: Response) 
 {
+    console.log("Route Origin:", req.headers.origin);
     try {
         if (!req.body || req.body.page === undefined) return res.status(200).json({
             code: -1, 
