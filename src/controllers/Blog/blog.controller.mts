@@ -1,8 +1,8 @@
 //Dung để đọc dữ liệu 1 bài Blog - Xài cho trang InnerBGlog 
 import type { Request } from "express"
 import type { Response } from "express"
-import { getData , deleteData , updateData } from "../../services/Blog/crud.mts"
-import defaultAvatar from "../../helpers/default-avatar.mts"
+import { getData , deleteData , updateData } from "../../services/Blog/crud.mjs"
+import defaultAvatar from "../../helpers/default-avatar.mjs"
 
 
 async function getBlog(req: Request , res: Response) 

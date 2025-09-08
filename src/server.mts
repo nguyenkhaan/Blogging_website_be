@@ -1,10 +1,10 @@
 import express from 'express' 
 import dotenv from 'dotenv'
 import cors from 'cors'
-import { router as blogRouter } from './routes/blog.router.mts'
-import { router as userRouter } from './routes/user.router.mts'
-import { router as searchRouter } from './routes/search.router.mts'
-import { jsonConfig , urlEncodedConfig , multerConfig , staticFileConfig } from './config/server.config.mts'
+import { router as blogRouter } from './routes/blog.router.mjs'
+import { router as userRouter } from './routes/user.router.mjs'
+import { router as searchRouter } from './routes/search.router.mjs'
+import { jsonConfig , urlEncodedConfig , multerConfig , staticFileConfig } from './config/server.config.mjs'
 dotenv.config({path: './.env'}) 
 
 console.log(process.env.HOST)

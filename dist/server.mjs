@@ -9,18 +9,47 @@ dotenv.config({ path: './.env' });
 console.log(process.env.HOST);
 const HOST = process.env.PORT;
 const app = express();
+const allowedOrigins = [
+    "http://localhost:5173", // dev local
+    "https://blogging-website-fe.vercel.app", // FE Vercel, 
+    "https://blogging-website-fe.vercel.app/"
+];
 app.use(cors({
-    origin: 'https://blogging-website-fe.vercel.app/', // hoặc '*' nếu cho tất cả
-    methods: ['GET', 'POST', 'PUT', 'DELETE'],
-    allowedHeaders: ['Content-Type'],
+    origin: function (origin, callback) {
+        // Cho phép request không có origin (Postman, server-side)
+        if (!origin)
+            return callback(null, true);
+        if (allowedOrigins.includes(origin)) {
+            callback(null, true);
+        }
+        else {
+            callback(new Error("Not allowed by CORS"));
+        }
+    },
+    methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+    allowedHeaders: ['Content-Type', 'Authorization'],
     credentials: true
 }));
+// app.use(cors({
+//   origin: true,
+//   credentials: true
+// }));
 jsonConfig(app);
 urlEncodedConfig(app);
 staticFileConfig(app);
 app.use(blogRouter);
 app.use(userRouter);
 app.use(searchRouter);
-app.listen(process.env.HOST || 3000, function () {
+console.log('Server is currently running at version 1.xxx');
+app.get('/', (req, res) => {
+    res.send('Hello world');
+});
+app.get('/version', (req, res) => {
+    res.json({
+        code: 3,
+        message: 'version 3.0'
+    });
+});
+app.listen(process.env.PORT || 3000, function () {
     console.log('Khoi dong thanh cong');
 });

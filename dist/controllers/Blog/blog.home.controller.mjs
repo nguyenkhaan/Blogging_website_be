@@ -5,6 +5,7 @@ async function countBlogs(req, res) {
     return res.status(200).send(totalBlogs);
 }
 async function getBlogByPage(req, res) {
+    console.log("Route Origin:", req.headers.origin);
     try {
         if (!req.body || req.body.page === undefined)
             return res.status(200).json({

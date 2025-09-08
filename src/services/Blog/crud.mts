@@ -1,7 +1,7 @@
-import { mongodbPrisma, mysqlPrisma } from "../../config/prisma.config.mts";
-import { drop, upload } from "../User/cloud.mts";
-import defaultAvatar from "../../helpers/default-avatar.mts";
-import { uuid } from "../../helpers/uuid.mts";
+import { mongodbPrisma, mysqlPrisma } from "../../config/prisma.config.mjs";
+import { drop, upload } from "../User/cloud.mjs";
+import defaultAvatar from "../../helpers/default-avatar.mjs";
+import { uuid } from "../../helpers/uuid.mjs";
 
 async function createData(blog: any) {
     return await mysqlPrisma.blogs.create({

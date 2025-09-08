@@ -1,9 +1,9 @@
 import type { Request } from "express"
 import type { Response } from "express"
-import { uploadToCloud } from "../../services/Blog/uploadBlog.mts"
-import { uuid } from "../../helpers/uuid.mts"
-import { createData } from "../../services/Blog/crud.mts"
-import { addBlogForUser } from "../../services/Blog/addBlogForUser.mts"
+import { uploadToCloud } from "../../services/Blog/uploadBlog.mjs"
+import { uuid } from "../../helpers/uuid.mjs"
+import { createData } from "../../services/Blog/crud.mjs"
+import { addBlogForUser } from "../../services/Blog/addBlogForUser.mjs"
 async function uploadBlog(req: Request, res: Response) {
     try {
         const { title, content , userID} = req.body;

@@ -1,9 +1,9 @@
 import express from "express";
-import { login , register } from "../controllers/User/user.authentication.controller.mts";
-import { getPersonalInformation, updatePersonalInformation } from "../controllers/User/user.personalInfo.mts";
-import { getUserBlogs } from "../controllers/User/getUserBlog.mts";
-import { activiyRecord } from "../controllers/User/activityRecord.mts";
-import { multerConfig } from "../config/server.config.mts";
+import { login , register } from "../controllers/User/user.authentication.controller.mjs";
+import { getPersonalInformation, updatePersonalInformation } from "../controllers/User/user.personalInfo.mjs";
+import { getUserBlogs } from "../controllers/User/getUserBlog.mjs";
+import { activiyRecord } from "../controllers/User/activityRecord.mjs";
+import { multerConfig } from "../config/server.config.mjs";
 const router = express.Router();
 const upload = multerConfig() 
 //[POST] /login 

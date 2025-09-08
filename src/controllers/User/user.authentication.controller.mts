@@ -1,7 +1,7 @@
 import type { Request } from "express";
 import type { Response } from "express" 
-import { getData , createData } from "../../services/User/service.user.authentication.mts";
-import { makeToken } from "../../services/User/createToken.mts";
+import { getData , createData } from "../../services/User/service.user.authentication.mjs";
+import { makeToken } from "../../services/User/createToken.mjs";
 //[LOGIN] 
 async function login(req: Request , res: Response) 
 {

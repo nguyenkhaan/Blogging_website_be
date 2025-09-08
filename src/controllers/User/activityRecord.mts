@@ -1,5 +1,5 @@
 import type { Request , Response } from "express";
-import { updateActivity } from "../../services/User/updateActivity.mts";
+import { updateActivity } from "../../services/User/updateActivity.mjs";
 async function activiyRecord(req : Request, res : Response) 
 {
     // console.log(req.body) 

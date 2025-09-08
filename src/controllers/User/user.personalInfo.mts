@@ -1,7 +1,7 @@
 
 import type { Request } from "express";
 import type { Response } from "express";
-import { getData , updateData } from "../../services/User/service.personalInfo.mts";
+import { getData , updateData } from "../../services/User/service.personalInfo.mjs";
 async function getPersonalInformation(req: Request, res: Response) 
 {
     try {

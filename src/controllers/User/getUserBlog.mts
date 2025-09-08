@@ -1,6 +1,6 @@
 import type { Request } from "express";
 import type { Response } from "express";
-import { getPersonalBlog } from "../../services/User/getPersonalBlog.mts";
+import { getPersonalBlog } from "../../services/User/getPersonalBlog.mjs";
 async function getUserBlogs(req: Request , res: Response) 
 {
     try {

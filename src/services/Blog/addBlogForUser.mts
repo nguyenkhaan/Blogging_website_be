@@ -1,4 +1,4 @@
-import { mongodbPrisma } from "../../config/prisma.config.mts";
+import { mongodbPrisma } from "../../config/prisma.config.mjs";
 async function addBlogForUser(userID: string , blogID: string) 
 {
     await mongodbPrisma.user.update({

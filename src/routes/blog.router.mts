@@ -1,10 +1,10 @@
 import express from 'express' 
 const router = express.Router(); 
-import { multerConfig } from '../config/server.config.mts';
-import { deleteBlog, getBlog, updateBlog } from '../controllers/Blog/blog.controller.mts';
-import { uploadBlog } from '../controllers/Blog/uploadBlog.mts';
-import { countBlogs } from '../controllers/Blog/blog.home.controller.mts';
-import { getBlogByPage } from '../controllers/Blog/blog.home.controller.mts';
+import { multerConfig } from '../config/server.config.mjs';
+import { deleteBlog, getBlog, updateBlog } from '../controllers/Blog/blog.controller.mjs';
+import { uploadBlog } from '../controllers/Blog/uploadBlog.mjs';
+import { countBlogs } from '../controllers/Blog/blog.home.controller.mjs';
+import { getBlogByPage } from '../controllers/Blog/blog.home.controller.mjs';
 const upload = multerConfig() 
 //[POST] - UPLOAD BLOG 
 router.post('/blog-upload', upload.single('banner'), uploadBlog)

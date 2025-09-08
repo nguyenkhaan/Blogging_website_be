@@ -1,7 +1,7 @@
 import type { Request } from "express";
 import type { Response } from "express";
 
-import { getBlog } from "../../services/Search/getBlog.mts";
+import { getBlog } from "../../services/Search/getBlog.mjs";
 async function searchBlog(req: Request , res: Response) 
 {
     try {
