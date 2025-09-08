@@ -16,25 +16,25 @@ const allowedOrigins = [
   "https://blogging-website-fe.vercel.app" // FE Vercel
 ];
 
-// app.use(cors({
-//   origin: function(origin, callback) {
-//     // Cho phép request không có origin (Postman, server-side)
-//     if (!origin) return callback(null, true);
-
-//     if (allowedOrigins.includes(origin)) {
-//       callback(null, true);
-//     } else {
-//       callback(new Error("Not allowed by CORS"));
-//     }
-//   },
-//   methods: ['GET','POST','PUT','DELETE'],
-//   allowedHeaders: ['Content-Type', 'Authorization'],
-//   credentials: true
-// }));
 app.use(cors({
-  origin: true,
+  origin: function(origin, callback) {
+    // Cho phép request không có origin (Postman, server-side)
+    if (!origin) return callback(null, true);
+
+    if (allowedOrigins.includes(origin)) {
+      callback(null, true);
+    } else {
+      callback(new Error("Not allowed by CORS"));
+    }
+  },
+  methods: ['GET','POST','PUT','DELETE'],
+  allowedHeaders: ['Content-Type', 'Authorization'],
   credentials: true
 }));
+// app.use(cors({
+//   origin: true,
+//   credentials: true
+// }));
 
 jsonConfig(app) 
 urlEncodedConfig(app) 
