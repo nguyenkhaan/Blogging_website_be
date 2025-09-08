@@ -44,7 +44,9 @@ staticFileConfig(app)
 app.use(blogRouter) 
 app.use(userRouter) 
 app.use(searchRouter) 
-
+app.get('/' , (req , res) => {
+  res.send('Hello world'); 
+})
 app.listen(process.env.PORT ||3000 , function() {
     console.log('Khoi dong thanh cong') 
 })
