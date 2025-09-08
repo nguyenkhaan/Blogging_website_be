@@ -13,7 +13,8 @@ const app = express()
 
 const allowedOrigins = [
   "http://localhost:5173", // dev local
-  "https://blogging-website-fe.vercel.app" // FE Vercel
+  "https://blogging-website-fe.vercel.app", // FE Vercel, 
+  "https://blogging-website-fe.vercel.app/"
 ];
 
 app.use(cors({
@@ -27,7 +28,7 @@ app.use(cors({
       callback(new Error("Not allowed by CORS"));
     }
   },
-  methods: ['GET','POST','PUT','DELETE'],
+  methods: ['GET','POST','PUT','DELETE', 'OPTION'],
   allowedHeaders: ['Content-Type', 'Authorization'],
   credentials: true
 }));
