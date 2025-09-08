@@ -8,7 +8,13 @@ async function getTopUserService()
         take: 4,
         orderBy: {
             famous: 'desc'
-        }
+        }, 
+        select: {
+            name: true, 
+            avatar: true, 
+            famous: true, 
+            subscribers: true, 
+        }, 
     })
     return res; 
 } 
