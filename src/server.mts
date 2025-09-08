@@ -28,7 +28,7 @@ app.use(cors({
       callback(new Error("Not allowed by CORS"));
     }
   },
-  methods: ['GET','POST','PUT','DELETE', 'OPTION'],
+  methods: ['GET','POST','PUT','DELETE', 'OPTIONS'],
   allowedHeaders: ['Content-Type', 'Authorization'],
   credentials: true
 }));
@@ -44,8 +44,15 @@ staticFileConfig(app)
 app.use(blogRouter) 
 app.use(userRouter) 
 app.use(searchRouter) 
+console.log('Server is currently running at version 1.xxx')
 app.get('/' , (req , res) => {
   res.send('Hello world'); 
+})
+app.get('/version' , (req , res) => {
+  res.json({
+    code: 3, 
+    message: 'version 3.0' 
+  })
 })
 app.listen(process.env.PORT ||3000 , function() {
     console.log('Khoi dong thanh cong') 
