@@ -4,6 +4,7 @@ import { getPersonalInformation, updatePersonalInformation } from "../controller
 import { getUserBlogs } from "../controllers/User/getUserBlog.mjs";
 import { activiyRecord } from "../controllers/User/activityRecord.mjs";
 import { multerConfig } from "../config/server.config.mjs";
+import { getTopUser } from "../controllers/User/getTopUser.mjs";
 const router = express.Router();
 const upload = multerConfig();
 //[POST] /login 
@@ -17,4 +18,6 @@ router.post('/user/personal-blogs', getUserBlogs);
 //[POST] //activiy-record
 router.post('/activity-record', activiyRecord);
 router.post('/update-personal', upload.single('avatar'), updatePersonalInformation);
+// [GET] //Top user 
+router.get('/top-home-user', getTopUser);
 export { router };
